@@ -1,0 +1,14 @@
+{
+  "name": "plantifyer",
+  "module": "main.ts",
+  "type": "module",
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "bunrest": "^1.3.7"
+  }
+}
