@@ -70,7 +70,7 @@ export class UsersBookmarksController {
     }
 
     bookmark.is_bookmarked = is_bookmarked ? 1 : 0;
-    res.status(200).json({ message: 'Bookmark updated successfully', bookmark: bookmark });
+    res.status(200).json(bookmark);
   }
 
   public getAllBookmarksForUserByEntity(req: UsersBookmarksRequest, res: BunResponse) {
@@ -88,7 +88,7 @@ export class UsersBookmarksController {
 
     const bookmarks = bookmarkTB.getAllBookmarksByEntityTypeForUser(user_id, entity_type);
 
-    res.status(200).json({ bookmarks: bookmarks });
+    res.status(200).json(bookmarks);
   }
 
   public getBookmarkForUser(req: UsersBookmarksRequest, res: BunResponse) {
@@ -110,7 +110,7 @@ export class UsersBookmarksController {
       return res.status(404).json({ error: "Bookmarked Not Found" });
     }
 
-    res.status(200).json({ bookmark: bookmark });
+    res.status(200).json(bookmark);
   }
 }
 
